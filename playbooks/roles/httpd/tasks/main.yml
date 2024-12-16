@@ -1,5 +1,3 @@
----
-
 - name: Copy file with owner and permissions
   ansible.builtin.copy:
     src: toto.txt
@@ -8,11 +6,12 @@
     group: root
     mode: '0600'
 
-- name: Install apache 
-    ansible.builtin.apt:
-      name: apache2
-      state: present
-- name:
-    ansible.builtin.apt:
-      name: ensure nginx is not here
-      state: absent
+- name: Install apache
+  ansible.builtin.apt:
+    name: apache2
+    state: present
+
+- name: Ensure nginx is not here
+  ansible.builtin.apt:
+    name: nginx
+    state: absent
