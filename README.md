@@ -21,5 +21,29 @@ Etape 1:
 
 **NB**: On se connecte via un utilisateur definit (pas root), mais il est essentiel de passer "root" pour administrer le server. Il faut donc configurer  le fichier -> (.cfg) et on y rajoute:
 
-    `[privilege_escalation]`
+    `[privilege_escalation]
+    become = True
+    become_user = root
+    become_ask_pass = True`
+
+- cofiguration de recettes / roles:
+
+
+
+.
+├── ansible.cfg
+├── etc
+│   └── hosts.yml
+├── playbooks
+│   ├── apache2.yml
+│   └── roles
+│       └── httpd
+│           ├── files
+│           │   └── toto.txt
+│           └── tasks
+│               └── main.yml
+├── README.md
+└── requirements.txt
+
+7 directories, 7 files
 
