@@ -18,3 +18,8 @@ Etape 1:
 
 - Création du fichier ansible.cfg pour spécifier l'utilisateur de connexion, au server distant!
 - y indiquer aussi le chemin de l'inventaire "inventory"
+
+**NB**: On se connecte via un utilisateur definit (pas root), mais il est essentiel de passer "root" pour administrer le server. Il faut donc configurer  le fichier -> (.cfg) et on y rajoute:
+
+    `[privilege_escalation]`
+

@@ -1,0 +1,8 @@
+---
+- name: deploiement d'apache
+  hosts: all
+  roles:
+    - httpd
+
+
+    
