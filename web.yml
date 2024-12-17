@@ -1,0 +1,9 @@
+---
+
+- name: Install Apache web server
+  hosts: all
+  vars:
+    php_version: 8.3
+  roles:
+    - web
+    - basic
