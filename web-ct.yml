@@ -1,0 +1,10 @@
+---
+
+- name: install caddy in docker env
+  hosts: all
+  vars: 
+    php_version: 8.3
+  roles:
+    - basic
+    - docker
+    
